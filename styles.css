@@ -63,7 +63,7 @@
   }
 
   a:hover {
-    text-decoration: underline;
+    color: rgb(94, 20, 20);
   }
 
   form label {
@@ -93,6 +93,7 @@
     line-height: 3rem;
     text-align: justify;
     font-size: 1.5rem;
+    margin: auto 1rem;
   }
   
   .headings {
@@ -129,6 +130,7 @@
     body {
       margin-left: 1rem;
       margin-right: 1rem;
+      font-size: 80%;
     }
 
     .robot-text-container {
@@ -155,7 +157,13 @@
     .nav-link {
       padding: 0 10% 0 0;
     }
+
+    a {
+      text-decoration: underline;
+    }
   }
+
+
   /*---------------------------- ROBOT --------------------------*/
   .newbie-robot * {
     position: absolute;
@@ -296,21 +304,25 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
 
-  .newbie-robot:hover .left-arm { /*plays the .right-arm animation again when .css-robot is hovered*/
+.newbie-robot:active .left-arm {
     animation: none;
-  }
+}
 
-  .newbie-robot:hover .robot-mouth {
+.newbie-robot:active .robot-mouth {
     animation: none;
-  }
+}
 
-  .newbie-robot:hover .right-eye {
+.newbie-robot:active .right-eye {
     animation: none;
-  }
+}
 
-  .newbie-robot:hover .left-eye {
+.newbie-robot:active .left-eye {
     animation: none;
-  }
+}
+
+.newbie-robot:active {
+  transform: scale(1.2);
+}
 
   @keyframes wave {
     10% {
@@ -337,10 +349,6 @@
       transform: rotate(-150deg);
       transform-origin: top left;
     }
-  }
-
-  .newbie-robot:active {
-    transform: scale(1.2);
   }
 
   @keyframes smile {
