@@ -1,0 +1,374 @@
+
+  :root {
+    --font-color: rgb(211, 202, 194);
+    --robot-color: rgb(239, 220, 177);
+    --background-color: rgb(20, 30, 40);
+    --header-color: orangered;
+  }
+  
+  * {
+    margin: 0 0;
+  }
+  
+  html {
+    font-size: 100%;
+  }
+  
+  body {
+    padding: 0 1rem;
+    font-family: 'Baskervville', serif;
+ 	  color: var(--font-color);
+ 	  background-color: var(--background-color)
+  }
+  
+  .nav-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--background-color);
+    padding: 1rem 0;
+    z-index: 3;
+  }
+
+  #nav-bar {
+    display: flex;
+    justify-content: left;
+    font-weight: bold;
+  }
+
+  .nav-link {
+    padding: 0 10% 0 10%;
+  }
+
+  .nav-container a:hover {
+    color: var(--header-color)
+  }
+  
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 4rem 0;
+    color: var(--header-color)
+  }
+
+  form {
+    display: grid;
+    grid-template-rows: 3fr;
+    grid-row-gap: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  form label {
+    font-size: 1.5rem;
+  }
+
+  form input, textarea {
+    border: 1px groove var(--header-color);
+    width: 50%;
+    margin-bottom: 30px;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-size: 1.5rem;
+  }
+
+  #submit {
+    background-color: var(--header-color);
+    width: 20%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  #submit:hover {
+    background-color: rgb(94, 20, 20)
+  }
+
+  .robot-text-container ul {
+    line-height: 3rem;
+    text-align: justify;
+    font-size: 1.5rem;
+  }
+  
+  .headings {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--header-color);
+    line-height: 3rem;
+    font-size: 2rem;
+    background-color: var(--robot-color);
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Baskervville', serif;
+  }
+
+  #video {
+    display: block;
+    margin: 80px auto;
+    width: 560px; 
+    height: 315px;
+  }
+
+  .robot-text-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  @media only screen and (max-width: 760px) {
+    body {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    .robot-text-container {
+      grid-template-columns: 1fr;
+    }
+
+    #video {
+      width: 360px;
+      height: 215px;
+    }
+
+    form input, textarea {
+      width: 100%;
+    }
+
+    form #submit {
+      width: 50%;
+    }
+
+    .nav-container {
+      width: 100%;
+    }
+
+    .nav-link {
+      padding: 0 10% 0 0;
+    }
+  }
+  /*---------------------------- ROBOT --------------------------*/
+  .newbie-robot * {
+    position: absolute;
+  }
+
+  .newbie-robot {
+    border-radius: 30%;
+    width: 400px;
+    height: 400px; 
+    margin: 10% auto auto auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+    background: transparent;
+  }
+
+  .robot-head {
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+    border-radius: 30% 30% 60% 60%;
+    top: 8%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--robot-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+  .robot-body {
+    border: 1px solid;
+    width: 150px;
+    height: 230px;
+    border-radius: 30% 30% 100% 100%;
+    top: 31%;
+    background-color: var(--robot-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .robot-body p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--header-color);
+    top: 10%;
+    font-family: 'Baskervville', serif;
+  }
+
+
+  .robot-face {
+    margin-top: 10%;
+    width: 80px;
+    height: 70px; 
+    border-radius: 30% 30% 60% 60%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+  }
+
+  .robot-eye {
+    border: 1px solid;
+    width: 70px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    top: 10%;
+    background-color: var(--robot-color);
+  }
+
+  .left-eye {
+    width: 20px;
+    height: 15px;
+    border-radius: 50%;
+    left: 15%;
+    top: 20%;
+    background-color: var(--header-color);
+    animation-name: chinese-eye;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+  }
+
+  .right-eye {
+    width: 20px;
+    height: 15px;
+    border-radius: 50%;
+    left: 55%;
+    top: 20%;
+    background-color: var(--header-color);
+    animation-name: chinese-eye;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+  }
+  
+  .robot-mouth {
+    width: 10px; 
+    height: 10px; 
+    border: 3px solid; 
+    border-color: transparent transparent var(--header-color) transparent; /* Only bottom border visible */
+    margin: 40px auto; 
+    animation-name: smile; 
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear; 
+  }
+ 
+  .left-arm {
+    border: 1px solid;
+    width: 30px;
+    height: 130px;
+    margin-left: 43%;
+    margin-top: 35%;
+    border-radius: 0 50% 50% 20%;
+    background-color: var(--robot-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    animation-name: wave;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
+    transition: transform 0.1s;
+  }
+
+  .right-arm {
+    border: 1px solid;
+    width: 30px;
+    height: 130px;
+    margin-right: 43%;
+    margin-top: 35%;
+    border-radius: 50% 0 20% 50%;
+    background-color: var(--robot-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .newbie-robot:hover .left-arm { /*plays the .right-arm animation again when .css-robot is hovered*/
+    animation: none;
+  }
+
+  .newbie-robot:hover .robot-mouth {
+    animation: none;
+  }
+
+  .newbie-robot:hover .right-eye {
+    animation: none;
+  }
+
+  .newbie-robot:hover .left-eye {
+    animation: none;
+  }
+
+  @keyframes wave {
+    10% {
+      transform: rotate(-130deg);
+      transform-origin: top left;
+    }
+    20% {
+      transform: rotate(-150deg);
+      transform-origin: top left;
+    }
+    30% {
+      transform: rotate(-130deg);
+      transform-origin: top left;
+    }
+    40% {
+      transform: rotate(-150deg);
+      transform-origin: top left;
+    }
+    50% {
+      transform: rotate(-130deg);
+      transform-origin: top left;
+    }
+    60% {
+      transform: rotate(-150deg);
+      transform-origin: top left;
+    }
+  }
+
+  .newbie-robot:active {
+    transform: scale(1.2);
+  }
+
+  @keyframes smile {
+    15% {
+      border-radius: 50%;
+      margin: 10 auto;
+      border: 1px solid;
+      border-color: transparent transparent var(--header-color) transparent;
+      transform: scale(3.0);
+    }
+    85% {
+      border-radius: 50%;
+      margin: 10 auto;
+      border: 1px solid;
+      border-color: transparent transparent var(--header-color) transparent;
+      transform: scale(3.0);
+    }
+  }
+
+  @keyframes chinese-eye {
+    15% {
+      height: 5px;
+      border-radius: 10%;
+      top: 30%;
+    }
+    85% {
+      height: 5px;
+      border-radius: 10%;
+      top: 30%;
+    }
+  }
