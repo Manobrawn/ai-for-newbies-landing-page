@@ -1,10 +1,19 @@
+@font-face {
+  font-family: "roboto-regular";
+  src: url(./Roboto/Roboto-Regular.ttf);
+}
 
-  :root {
+@font-face {
+  font-family: "roboto-bold";
+  src: url(./Roboto/Roboto-Bold.ttf);
+}
+
+:root {
     --font-color: rgb(211, 202, 194);
     --robot-color: rgb(239, 220, 177);
     --background-color: rgb(20, 30, 40);
     --header-color: orangered;
-  }
+}
   
   * {
     margin: 0 0;
@@ -12,6 +21,7 @@
   
   html {
     font-size: 100%;
+    font-family: "roboto-regular";
   }
   
   body {
@@ -20,30 +30,7 @@
  	  color: var(--font-color);
  	  background-color: var(--background-color)
   }
-  
-  .nav-container {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: var(--background-color);
-    padding: 1rem 0;
-    z-index: 3;
-  }
 
-  #nav-bar {
-    display: flex;
-    justify-content: left;
-    font-weight: bold;
-  }
-
-  .nav-link {
-    padding: 0 10% 0 10%;
-  }
-
-  .nav-container a:hover {
-    color: var(--header-color)
-  }
-  
   h1 {
     font-size: 3rem;
     text-align: center;
@@ -103,20 +90,13 @@
     color: var(--header-color);
     line-height: 3rem;
     font-size: 2rem;
-    background-color: var(--robot-color);
+
   }
   
   footer {
     text-align: center;
     margin-top: 50px;
     font-family: 'Baskervville', serif;
-  }
-
-  #video {
-    display: block;
-    margin: 80px auto;
-    width: 560px; 
-    height: 315px;
   }
 
   .robot-text-container {
@@ -137,11 +117,6 @@
       grid-template-columns: 1fr;
     }
 
-    #video {
-      width: 360px;
-      height: 215px;
-    }
-
     form input, textarea {
       width: 100%;
     }
@@ -149,20 +124,7 @@
     form #submit {
       width: 50%;
     }
-
-    .nav-container {
-      width: 100%;
-    }
-
-    .nav-link {
-      padding: 0 10% 0 0;
-    }
-
-    a {
-      text-decoration: underline;
-    }
   }
-
 
   /*---------------------------- ROBOT --------------------------*/
   .newbie-robot * {
