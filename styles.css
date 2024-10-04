@@ -25,8 +25,6 @@
   }
   
   body {
-    padding: 0 1rem;
-    font-family: 'Baskervville', serif;
  	  color: var(--font-color);
  	  background-color: var(--background-color)
   }
@@ -42,6 +40,9 @@
     display: grid;
     grid-template-rows: 3fr;
     grid-row-gap: 1rem;
+    background-color: var(--robot-color);
+    margin: 2rem auto 0 auto;
+    width: 80%;
   }
 
   a {
@@ -53,27 +54,71 @@
     color: rgb(94, 20, 20);
   }
 
+  form fieldset {
+    color: var(--background-color);
+    border: none;
+  }
+
   form label {
+    font-size: 1.2rem;
+    padding-top: 1.5rem;
+    color: var(--background-color);
+    text-align: center;
+  }
+
+  .name-email-label {
     font-size: 1.5rem;
   }
 
-  form input, textarea {
-    border: 1px groove var(--header-color);
-    width: 50%;
-    margin-bottom: 30px;
-    background-color: var(--background-color);
-    color: var(--font-color);
+  form legend {
     font-size: 1.5rem;
+    text-align: center;
   }
 
-  #submit {
+  .how-find-us {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    margin-top: 2rem;
+  }
+
+  .how-find-us legend {
+    margin-bottom: 1rem;
+  }
+
+  .how-find-us input {
+    transform: scale(1.5);
+  }
+
+  .name, .email {
+    display: flex;
+    justify-content: center;
+  }
+
+  .name-input, .email-input {
+    width: 70%;
+    margin: auto;
+  }
+  
+  form input {
+    margin: 1rem;
+    color: var(--background-color);
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .submit {
     background-color: var(--header-color);
     width: 20%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: none;
+    margin: auto auto 3rem auto;
+
   }
   
-  #submit:hover {
-    background-color: rgb(94, 20, 20)
+  .submit:hover {
+    background-color: var(--robot-color);
+    color: var(--header-color);
   }
 
   .robot-text-container ul {
@@ -84,19 +129,31 @@
   }
   
   .headings {
-    margin-top: 4rem;
-    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     text-align: center;
     color: var(--header-color);
     line-height: 3rem;
     font-size: 2rem;
+  }
 
+  blockquote {
+    background-color: var(--robot-color);
+    width: 100%;
+    color: var(--background-color);
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2rem;
+  } 
+
+  aside {
+    width: 80%;
   }
   
   footer {
     text-align: center;
-    margin-top: 50px;
-    font-family: 'Baskervville', serif;
+    margin-top: 3rem;
+    padding: 1rem;
   }
 
   .robot-text-container {
@@ -105,33 +162,13 @@
     align-items: center;
     justify-content: space-evenly;
   }
-
-  @media only screen and (max-width: 760px) {
-    body {
-      margin-left: 1rem;
-      margin-right: 1rem;
-      font-size: 80%;
-    }
-
-    .robot-text-container {
-      grid-template-columns: 1fr;
-    }
-
-    form input, textarea {
-      width: 100%;
-    }
-
-    form #submit {
-      width: 50%;
-    }
-  }
-
   /*---------------------------- ROBOT --------------------------*/
   .newbie-robot * {
     position: absolute;
   }
 
   .newbie-robot {
+    left: 15%;
     border-radius: 30%;
     width: 400px;
     height: 400px; 
@@ -177,7 +214,6 @@
     font-size: 1.5rem;
     color: var(--header-color);
     top: 10%;
-    font-family: 'Baskervville', serif;
   }
 
 
@@ -342,3 +378,62 @@
       top: 30%;
     }
   }
+/*-------------------------------- RESPONSIVE ---------------------------------*/
+@media only screen and (max-width: 950px) {
+  .robot-text-container {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  form .submit {
+    width: 50%;
+  }
+
+  .newbie-robot {
+    left: -5%;
+  }
+
+  .headings {
+    font-size: 1.5rem;
+  }
+
+  blockquote {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+  }
+
+  form legend {
+    font-size: 1.2rem;
+  }
+
+  form label {
+    font-size: 1rem;
+    padding-top: 0;
+  }
+
+  .name-email-label {
+    font-size: 1.2rem;
+  }
+
+  .how-find-us {
+    display: block;
+  }
+
+  .main-sub-heading {
+    margin: 1rem auto 1rem auto;
+  }
+
+  aside ul li {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .form-heading {
+    margin: 1rem auto 0 auto;
+
+  }
+}
+
