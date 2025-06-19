@@ -1,1 +1,1 @@
-https://manobrawn.github.io/AI-for-Newbies-landing-page/
+https://manobrawn.github.io/ai-for-newbies-landing-page/
