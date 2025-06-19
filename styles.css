@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "roboto-regular";
-  src: url(./Roboto/Roboto-Regular.ttf);
+    font-family: "roboto-regular";
+    src: url(./Roboto/Roboto-Regular.ttf);
 }
 
 @font-face {
-  font-family: "roboto-bold";
-  src: url(./Roboto/Roboto-Bold.ttf);
+    font-family: "roboto-bold";
+    src: url(./Roboto/Roboto-Bold.ttf);
 }
 
 :root {
@@ -14,164 +14,167 @@
     --background-color: rgb(20, 30, 40);
     --header-color: orangered;
 }
-  
-  * {
+
+* {
     margin: 0 0;
-  }
-  
-  html {
+}
+
+html {
     font-size: 100%;
     font-family: "roboto-regular";
-  }
-  
-  body {
- 	  color: var(--font-color);
- 	  background-color: var(--background-color)
-  }
+}
 
-  h1 {
+body {
+    color: var(--font-color);
+    background-color: var(--background-color);
+}
+
+h1 {
     font-size: 3rem;
     text-align: center;
     margin: 4rem 0;
-    color: var(--header-color)
-  }
+    color: var(--header-color);
+}
 
-  form {
+form {
     display: grid;
     grid-template-rows: 3fr;
     grid-row-gap: 1rem;
     background-color: var(--robot-color);
     margin: 2rem auto 0 auto;
     width: 80%;
-  }
+}
 
-  a {
+a {
     text-decoration: none;
     color: inherit;
-  }
+}
 
-  a:hover {
+a:hover {
     color: rgb(94, 20, 20);
-  }
+}
 
-  form fieldset {
+form fieldset {
     color: var(--background-color);
     border: none;
-  }
+}
 
-  form label {
+form label {
     font-size: 1.2rem;
     padding-top: 1.5rem;
     color: var(--background-color);
     text-align: center;
-  }
+}
 
-  .name-email-label {
+.name-email-label {
     font-size: 1.5rem;
-  }
+}
 
-  form legend {
+form legend {
     font-size: 1.5rem;
     text-align: center;
-  }
+}
 
-  .how-find-us {
+.how-find-us {
     display: flex;
     justify-content: space-evenly;
     justify-items: center;
     margin-top: 2rem;
-  }
+}
 
-  .how-find-us legend {
+.how-find-us legend {
     margin-bottom: 1rem;
-  }
+}
 
-  .how-find-us input {
+.how-find-us input {
     transform: scale(1.5);
-  }
+}
 
-  .name, .email {
+.name,
+.email {
     display: flex;
     justify-content: center;
-  }
+}
 
-  .name-input, .email-input {
+.name-input,
+.email-input {
     width: 70%;
     margin: auto;
-  }
-  
-  form input {
+}
+
+form input {
     margin: 1rem;
     color: var(--background-color);
     font-size: 1rem;
     padding: 0.5rem;
-  }
+}
 
-  .submit {
+.submit {
     background-color: var(--header-color);
     width: 20%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border: none;
     margin: auto auto 3rem auto;
+}
 
-  }
-  
-  .submit:hover {
+.submit:hover {
     background-color: var(--robot-color);
     color: var(--header-color);
-  }
+}
 
-  .robot-text-container ul {
+.robot-text-container ul {
     line-height: 3rem;
     text-align: justify;
     font-size: 1.5rem;
     margin: auto 1rem;
-  }
-  
-  .headings {
+}
+
+.headings {
     margin-top: 3rem;
     margin-bottom: 1rem;
     text-align: center;
     color: var(--header-color);
     line-height: 3rem;
     font-size: 2rem;
-  }
+}
 
-  blockquote {
+blockquote {
     background-color: var(--robot-color);
     width: 100%;
     color: var(--background-color);
     font-size: 2rem;
     text-align: center;
     line-height: 2rem;
-  } 
+    border: 5px solid var(--header-color);
+    padding: 2rem;
+}
 
-  aside {
+aside {
     width: 80%;
-  }
-  
-  footer {
+}
+
+footer {
     text-align: center;
     margin-top: 3rem;
     padding: 1rem;
-  }
+}
 
-  .robot-text-container {
-    display: grid; 
+.robot-text-container {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: space-evenly;
-  }
-  /*---------------------------- ROBOT --------------------------*/
-  .newbie-robot * {
+}
+/*---------------------------- ROBOT --------------------------*/
+.newbie-robot * {
     position: absolute;
-  }
+}
 
-  .newbie-robot {
+.newbie-robot {
     left: 15%;
     border-radius: 30%;
     width: 400px;
-    height: 400px; 
+    height: 400px;
     margin: 10% auto auto auto;
     display: flex;
     justify-content: center;
@@ -180,9 +183,9 @@
     transition: 1s;
     transition-timing-function: ease-in-out;
     background: transparent;
-  }
+}
 
-  .robot-head {
+.robot-head {
     border: 1px solid;
     width: 100px;
     height: 100px;
@@ -193,9 +196,9 @@
     background-color: var(--robot-color);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     z-index: 2;
-  }
+}
 
-  .robot-body {
+.robot-body {
     border: 1px solid;
     width: 150px;
     height: 230px;
@@ -207,27 +210,26 @@
     justify-content: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1;
-  }
+}
 
-  .robot-body p {
+.robot-body p {
     font-weight: bold;
     font-size: 1.5rem;
     color: var(--header-color);
     top: 10%;
-  }
+}
 
-
-  .robot-face {
+.robot-face {
     margin-top: 10%;
     width: 80px;
-    height: 70px; 
+    height: 70px;
     border-radius: 30% 30% 60% 60%;
     display: flex;
     justify-content: center;
     background-color: var(--background-color);
-  }
+}
 
-  .robot-eye {
+.robot-eye {
     border: 1px solid;
     width: 70px;
     height: 30px;
@@ -235,9 +237,9 @@
     position: relative;
     top: 10%;
     background-color: var(--robot-color);
-  }
+}
 
-  .left-eye {
+.left-eye {
     width: 20px;
     height: 15px;
     border-radius: 50%;
@@ -248,9 +250,9 @@
     animation-duration: 3s;
     animation-iteration-count: 2;
     animation-timing-function: linear;
-  }
+}
 
-  .right-eye {
+.right-eye {
     width: 20px;
     height: 15px;
     border-radius: 50%;
@@ -261,21 +263,21 @@
     animation-duration: 3s;
     animation-iteration-count: 2;
     animation-timing-function: linear;
-  }
-  
-  .robot-mouth {
-    width: 10px; 
-    height: 10px; 
-    border: 3px solid; 
+}
+
+.robot-mouth {
+    width: 10px;
+    height: 10px;
+    border: 3px solid;
     border-color: transparent transparent var(--header-color) transparent; /* Only bottom border visible */
-    margin: 40px auto; 
-    animation-name: smile; 
+    margin: 40px auto;
+    animation-name: smile;
     animation-duration: 3s;
     animation-iteration-count: 2;
-    animation-timing-function: linear; 
-  }
- 
-  .left-arm {
+    animation-timing-function: linear;
+}
+
+.left-arm {
     border: 1px solid;
     width: 30px;
     height: 130px;
@@ -289,9 +291,9 @@
     animation-iteration-count: 2;
     animation-timing-function: ease-in-out;
     transition: transform 0.1s;
-  }
+}
 
-  .right-arm {
+.right-arm {
     border: 1px solid;
     width: 30px;
     height: 130px;
@@ -300,7 +302,7 @@
     border-radius: 50% 0 20% 50%;
     background-color: var(--robot-color);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
+}
 
 .newbie-robot:active .left-arm {
     animation: none;
@@ -319,121 +321,119 @@
 }
 
 .newbie-robot:active {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
-  @keyframes wave {
+@keyframes wave {
     10% {
-      transform: rotate(-130deg);
-      transform-origin: top left;
+        transform: rotate(-130deg);
+        transform-origin: top left;
     }
     20% {
-      transform: rotate(-150deg);
-      transform-origin: top left;
+        transform: rotate(-150deg);
+        transform-origin: top left;
     }
     30% {
-      transform: rotate(-130deg);
-      transform-origin: top left;
+        transform: rotate(-130deg);
+        transform-origin: top left;
     }
     40% {
-      transform: rotate(-150deg);
-      transform-origin: top left;
+        transform: rotate(-150deg);
+        transform-origin: top left;
     }
     50% {
-      transform: rotate(-130deg);
-      transform-origin: top left;
+        transform: rotate(-130deg);
+        transform-origin: top left;
     }
     60% {
-      transform: rotate(-150deg);
-      transform-origin: top left;
+        transform: rotate(-150deg);
+        transform-origin: top left;
     }
-  }
-
-  @keyframes smile {
-    15% {
-      border-radius: 50%;
-      margin: 10 auto;
-      border: 1px solid;
-      border-color: transparent transparent var(--header-color) transparent;
-      transform: scale(3.0);
-    }
-    85% {
-      border-radius: 50%;
-      margin: 10 auto;
-      border: 1px solid;
-      border-color: transparent transparent var(--header-color) transparent;
-      transform: scale(3.0);
-    }
-  }
-
-  @keyframes chinese-eye {
-    15% {
-      height: 5px;
-      border-radius: 10%;
-      top: 30%;
-    }
-    85% {
-      height: 5px;
-      border-radius: 10%;
-      top: 30%;
-    }
-  }
-/*-------------------------------- RESPONSIVE ---------------------------------*/
-@media only screen and (max-width: 950px) {
-  .robot-text-container {
-    grid-template-columns: 1fr;
-  }
-
-  form {
-    width: 90%;
-  }
-
-  form .submit {
-    width: 50%;
-  }
-
-  .newbie-robot {
-    left: -5%;
-  }
-
-  .headings {
-    font-size: 1.5rem;
-  }
-
-  blockquote {
-    font-size: 1.2rem;
-    padding: 0.2rem;
-  }
-
-  form legend {
-    font-size: 1.2rem;
-  }
-
-  form label {
-    font-size: 1rem;
-    padding-top: 0;
-  }
-
-  .name-email-label {
-    font-size: 1.2rem;
-  }
-
-  .how-find-us {
-    display: block;
-  }
-
-  .main-sub-heading {
-    margin: 1rem auto 1rem auto;
-  }
-
-  aside ul li {
-    font-size: 1rem;
-    line-height: 2rem;
-  }
-
-  .form-heading {
-    margin: 1rem auto 0 auto;
-
-  }
 }
 
+@keyframes smile {
+    15% {
+        border-radius: 50%;
+        margin: 10 auto;
+        border: 1px solid;
+        border-color: transparent transparent var(--header-color) transparent;
+        transform: scale(3);
+    }
+    85% {
+        border-radius: 50%;
+        margin: 10 auto;
+        border: 1px solid;
+        border-color: transparent transparent var(--header-color) transparent;
+        transform: scale(3);
+    }
+}
+
+@keyframes chinese-eye {
+    15% {
+        height: 5px;
+        border-radius: 10%;
+        top: 30%;
+    }
+    85% {
+        height: 5px;
+        border-radius: 10%;
+        top: 30%;
+    }
+}
+/*-------------------------------- RESPONSIVE ---------------------------------*/
+@media only screen and (max-width: 950px) {
+    .robot-text-container {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    form .submit {
+        width: 50%;
+    }
+
+    .newbie-robot {
+        left: -5%;
+    }
+
+    .headings {
+        font-size: 1.5rem;
+    }
+
+    blockquote {
+        font-size: 1.2rem;
+        padding: 0.2rem;
+    }
+
+    form legend {
+        font-size: 1.2rem;
+    }
+
+    form label {
+        font-size: 1rem;
+        padding-top: 0;
+    }
+
+    .name-email-label {
+        font-size: 1.2rem;
+    }
+
+    .how-find-us {
+        display: block;
+    }
+
+    .main-sub-heading {
+        margin: 1rem auto 1rem auto;
+    }
+
+    aside ul li {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    .form-heading {
+        margin: 1rem auto 0 auto;
+    }
+}
